@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Kota Semarang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div class="landing-page" id="landingPage">
+        <h1>WebGIS Kota Semarang</h1>
+        <p>Jelajahi Kota Semarang Melalui Peta Interaktif</p>
+        <button class="explore-btn" id="exploreBtn">Explorasi Sekarang</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Instagram Icon -->
+        <a href="https://instagram.com/fadilfary" target="_blank" class="instagram-icon" title="Follow Instagram">
+            <svg viewBox="0 0 24 24" width="28" height="28">
+                <path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+            </svg>
+        </a>
+        <!-- Linkedin Icon -->
+        <a href="https://www.linkedin.com/in/muhammad-fadhiil-al-ghifaary-927b2524b/" target="_blank" class="linkedin-icon" title="Connect on LinkedIn">
+            <svg viewBox="0 0 24 24" width="28" height="28">
+                <path fill="currentColor" d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M8.34 17V10.66H5.67V17H8.34M7.01 9.5A1.67 1.67 0 0 0 8.68 7.83A1.67 1.67 0 0 0 7.01 6.16A1.67 1.67 0 0 0 5.34 7.83A1.67 1.67 0 0 0 7.01 9.5M18.33 17V13.25C18.33 11.5 16.83 10.92 15.92 10.92C15.08 10.92 14.58 11.42 14.33 11.75V10.66H11.66C11.71 11.42 11.66 17 11.66 17H14.33V13.75C14.33 12.92 14.58 12.25 15.25 12.25C15.92 12.25 16.08 12.75 16.08 13.42V17H18.33Z" />
+            </svg>
+        </a>
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menu</h3>
+                <button class="close-btn" id="closeBtn">&times;</button>
+            </div>
+            <ul>
+                <li><a href="#home" class="nav-link active" data-section="home"> Home</a></li>
+                <li><a href="#map" class="nav-link" data-section="map"> Map</a></li>
+                <li><a href="#data" class="nav-link" data-section="data"> Data</a></li>
+                <li><a href="#author" class="nav-link" data-section="author"> Author</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact"> Contact</a></li>
+            </ul>
+        </aside>
+
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <div class="home-container">
+                <div class="home-hero">
+                    <h2>Selamat Datang di WebGIS Kota Semarang</h2>
+                    <p>Platform sistem informasi geografis berbasis web yang memungkinkan Anda untuk mengeksplorasi, menganalisis, dan memvisualisasikan data spasial secara interaktif.</p>
+                </div>
+
+                <div class="city-info">
+                    <h3>Tentang Kota Semarang</h3>
+                    <div class="city-content">
+                        <img src="asset/logo-kota-semarang.jpg" alt="Kota Semarang" class="city-image">
+                        <div class="city-description">
+                            <p>Semarang adalah ibu kota Provinsi Jawa Tengah, Indonesia. Kota ini terletak di pantai utara Pulau Jawa dan merupakan kota metropolitan terbesar kelima di Indonesia setelah Jakarta, Surabaya, Bandung, dan Medan.</p>
+                            <p>Semarang memiliki luas wilayah 373,7 km² dengan topografi yang beragam, mulai dari dataran rendah hingga perbukitan. Kota ini dikenal dengan julukan "Kota Lumpia" dan memiliki berbagai destinasi wisata seperti Lawang Sewu, Kota Lama, dan Sam Poo Kong.</p>
+                            <p>Sebagai pusat pemerintahan, perekonomian, dan kebudayaan Jawa Tengah, Semarang terus berkembang menjadi kota yang modern namun tetap mempertahankan nilai-nilai historis dan budayanya.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-section">
+                    <h3>Berita Terkini Kota Semarang</h3>
+                    <div class="news-grid">
+                        <div class="news-card" data-news-url="https://share.google/nl12zCY8HIuSQuwBj">
+                            <div class="news-image-container">
+                                <img src="asset/logo-kota-semarang.jpg" alt="Portal Berita Semarang" class="news-image">
+                            </div>
+                            <h4>Portal Berita Semarang</h4>
+                            <p>Informasi terkini seputar pembangunan dan perkembangan Kota Semarang</p>
+                            <a href="https://share.google/nl12zCY8HIuSQuwBj" target="_blank" class="news-link">Kunjungi Website →</a>
+                        </div>
+                        <div class="news-card" data-news-url="https://jateng.tribunnews.com/tag/kota-semarang">
+                            <div class="news-image-container">
+                                <img src="asset/logo-kota-semarang.jpg" alt="Tribun Jateng" class="news-image">
+                            </div>
+                            <h4>Tribun Jateng</h4>
+                            <p>Berita terbaru Jawa Tengah dan Kota Semarang</p>
+                            <a href="https://jateng.tribunnews.com/tag/kota-semarang" target="_blank" class="news-link">Baca Berita →</a>
+                        </div>
+                        <div class="news-card" data-news-url="https://www.suaramerdeka.com">
+                            <div class="news-image-container">
+                                <img src="asset/logo-kota-semarang.jpg" alt="Suara Merdeka" class="news-image">
+                            </div>
+                            <h4>Suara Merdeka</h4>
+                            <p>Media lokal dengan liputan lengkap Kota Semarang</p>
+                            <a href="https://www.suaramerdeka.com" target="_blank" class="news-link">Lihat Selengkapnya →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <div class="feature-card">
+                        <h3>🗺️ Peta Interaktif</h3>
+                        <p>Jelajahi peta dengan fitur zoom, pan, dan layer control untuk pengalaman visualisasi yang optimal.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📊 Analisis Data</h3>
+                        <p>Akses dan analisis data geografis dengan mudah melalui interface yang user-friendly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🚀 Performa Cepat</h3>
+                        <p>Dihosting di Netlify untuk performa loading yang cepat dan stabil.</p>
+                    </div>
+                </div>
+
+                <!-- Image Carousel/Slider -->
+                <div class="carousel-section">
+                    <h3>Galeri Kota Semarang</h3>
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev" id="prevBtn">❮</button>
+                        <div class="carousel-wrapper">
+                            <div class="carousel-track" id="carouselTrack">
+                                <div class="carousel-slide">
+                                    <img src="https://visitjawatengah.jatengprov.go.id/assets/images/9bdc3ef5-9d54-42e8-a1e6-c4ce5e00796d.jpeg" alt="Kota Lama Semarang">
+                                    <p>Kota Lama Semarang</p>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/600x400/6D5A43/FFFFFF?text=Lawang+Sewu" alt="Lawang Sewu">
+                                    <p>Lawang Sewu</p>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/600x400/E8DCC4/333333?text=Sam+Poo+Kong" alt="Sam Poo Kong">
+                                    <p>Sam Poo Kong</p>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/600x400/A0826D/FFFFFF?text=Pandanaran" alt="Pandanaran">
+                                    <p>Pandanaran</p>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://via.placeholder.com/600x400/755A47/FFFFFF?text=Pantai+Semarang" alt="Pantai Semarang">
+                                    <p>Pantai Semarang</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn next" id="nextBtn">❯</button>
+                    </div>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
+
+                <div style="text-align: center;">
+                    <a href="#map" class="view-map-btn" data-section="map">Lihat Peta</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map">
+            <div class="map-container">
+                <h2>Peta Interaktif Kota Semarang</h2>
+                <p>Peta interaktif yang menampilkan data spasial Kota Semarang dari berbagai sumber.</p>
+                <iframe class="map-frame" src="https://loquacious-khapse-1ede61.netlify.app/" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <!-- Data Section -->
+        <section id="data">
+            <div class="data-container">
+                <h2>Data & Informasi</h2>
+                
+                <div class="data-intro">
+                    <h3>Sumber Data WebGIS</h3>
+                    <p>Data yang digunakan dalam WebGIS ini berasal dari berbagai sumber resmi dan terpercaya untuk memberikan informasi geografis yang akurat tentang Kota Semarang.</p>
+                </div>
+
+                <div class="data-grid">
+                    <div class="feature-card">
+                        <h3>📍 Data Batas Administrasi</h3>
+                        <p>Data batas wilayah administrasi Kota Semarang meliputi batas kota, kecamatan, dan kelurahan dari BIG dan Pemerintah Kota Semarang.</p>
+                        <a href="https://drive.google.com/drive/folders/18oX_Lw5pYhZ8n0MRa4zJ0seeuVCRRjsP?usp=drive_link" target="_blank" class="data-download">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Akses Data
+                        </a>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>🏢 Data Fasilitas Umum</h3>
+                        <p>Informasi lokasi fasilitas umum seperti sekolah, rumah sakit, kantor pemerintahan di Kota Semarang.</p>
+                        <a href="https://drive.google.com/your-link-here" target="_blank" class="data-download">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Akses Data
+                        </a>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>🛣️ Data Jaringan Jalan</h3>
+                        <p>Data jaringan jalan utama, jalan lokal, dan infrastruktur transportasi untuk analisis aksesibilitas.</p>
+                        <a href="https://drive.google.com/your-link-here" target="_blank" class="data-download">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Akses Data
+                        </a>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>🌍 Data Tutupan Lahan</h3>
+                        <p>Informasi penggunaan dan tutupan lahan yang mencakup area permukiman, industri, dan ruang terbuka hijau.</p>
+                        <a href="https://drive.google.com/your-link-here" target="_blank" class="data-download">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Akses Data
+                        </a>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Pengolahan Data </h3>
+                    <p>Analisis Urban Heat Island (UHI) di Kota Semarang dilakukan menggunakan Google Earth Engine dengan memanfaatkan citra satelit penginderaan jauh. Tahapan pengolahan diawali dengan identifikasi penutupan lahan (Land Use Land Cover/LULC) melalui pengambilan sampel untuk mengenali karakteristik permukaan wilayah seperti kawasan terbangun, vegetasi, badan air, dan lahan terbuka. Selanjutnya dihitung indeks vegetasi menggunakan NDVI untuk menggambarkan tingkat kerapatan vegetasi, yang kemudian diturunkan menjadi Fractional NDVI (FNDVI) sebagai representasi proporsi tutupan vegetasi pada setiap piksel. Nilai FNDVI digunakan dalam perhitungan emisivitas permukaan, yaitu kemampuan objek dalam memancarkan energi panas. Berdasarkan parameter tersebut, dilakukan perhitungan Land Surface Temperature (LST) untuk memperoleh suhu permukaan secara lebih akurat. Hasil LST kemudian dianalisis untuk mengidentifikasi pola sebaran suhu dan fenomena Urban Heat Island, di mana kawasan terbangun cenderung memiliki suhu lebih tinggi dibandingkan wilayah dengan tutupan vegetasi yang baik.</p>
+                    <a href="https://code.earthengine.google.com/cea2bc70fa2ccd1d6a662466a1228aae" target="_blank" class="data-link"> Lihat kode GEE →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Author Section -->
+        <section id="author">
+            <div class="author-container">
+                <h2>Tentang Pengembang</h2>
+                <div class="feature-card">
+                <img src="asset/fotofadil.jpg" alt="Muhammad Fadhiil Al - Ghifaary" class="author-image">
+                    <h3>Muhammad Fadhiil Al - Ghifaary</h3>
+                    <p>Dikembangkan oleh mahasiswa program studi Sains Informasi Geografi angkatan 2024 yang sedang belajar mengintegrasikan QGIS dengan platform web modern.</p>
+                    <p style="margin-top: 15px;">Proyek ini merupakan bagian dari pembelajaran untuk bisa menjadi ahli dan jangan lupa kalian wajib dengerin perunggu dan nonton pertunjukan dalam dinamika.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-container">
+                <h2>Kontak</h2>
+                <div class="feature-card">
+                    <h3>Hubungi Kami</h3>
+                    <p>Email: ryyfary@gmail.com</p>
+                    <p>Contact: +62 821 2361 1848</p>
+                    <p style="margin-top: 15px;">Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau feedback!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
